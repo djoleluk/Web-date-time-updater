@@ -9,7 +9,11 @@ app.use(cors({
 
 app.get('/api/message', (req, res) => {
   console.log("GET request received!");
-  const currentTime = new Date().toLocaleString(); // current time as a formatted string
+  const currentTime = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Belgrade',
+    dateStyle: 'full',
+    timeStyle: 'long'
+  }).format(new Date());
   res.json({ message: `Current time is: ${currentTime}` });
 });
 
