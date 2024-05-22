@@ -1,14 +1,15 @@
 {
-  "name": "react_js_test_3",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "serve-favicon": "^2.5.0"
-  }
+    "name": "react_js_test_3",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/server.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.19.2",
+        "serve-favicon": "^2.5.0"
+    }
 }
+
 
