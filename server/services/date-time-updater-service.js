@@ -1,11 +1,12 @@
 const express = require('express');
-const cors = require('cors'); 
+const cors = require('cors');
 const app = express();
 const port = 3001;
 
-app.use(cors()); 
+app.use(cors({
+  origin: 'http://13.48.26.177:3000' 
+}));
 
-// API endpoint
 app.get('/api/message', (req, res) => {
   console.log("GET request received!");
   const currentTime = new Date().toLocaleString(); // current time as a formatted string
