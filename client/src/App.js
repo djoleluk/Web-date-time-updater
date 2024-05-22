@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const [message, setMessage] = useState('Loading...');
-  const [buttonMessage, setButtonMessage] = useState('Display current date and time from Mionica, Serbia.');
+  const [buttonMessage] = useState('Display current date and time from Mionica, Serbia.'); // this should be fixed now ?
 
   useEffect(() => {
     const fetchMessage = () => {
