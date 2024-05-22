@@ -8,7 +8,7 @@ function App() {
 
     useEffect(() => {
         const fetchMessage = () => {
-            axios.get('/api/message')
+            axios.get('http://13.48.26.177:3000/api/message')
                 .then(response => {
                     setMessage(response.data.message);
                 })
@@ -18,8 +18,7 @@ function App() {
                 });
         };
 
-        fetchMessage(); // Fetch the data initially
-
+        fetchMessage(); // Fetch the data
         const interval = setInterval(fetchMessage, 1000); // Fetch data every second
         return () => clearInterval(interval); // Clear the interval when the component unmounts
     }, []);
@@ -35,5 +34,6 @@ function App() {
 }
 
 export default App;
+
 
 
