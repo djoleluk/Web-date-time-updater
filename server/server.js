@@ -1,7 +1,11 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 const port = 3000; // or any port you prefer
+
+// Enable CORS
+app.use(cors({ origin: '*' }));
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '../client/build')));
