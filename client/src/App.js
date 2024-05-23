@@ -18,7 +18,7 @@ function App() {
         });
     };
 
-    fetchMessage(); // Fetch the data
+    fetchMessage(); // Fetch the data initially
     const interval = setInterval(fetchMessage, 1000); // Fetch data every second
     return () => clearInterval(interval); // Clear the interval when the component unmounts
   }, []);
@@ -34,6 +34,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

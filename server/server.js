@@ -5,6 +5,7 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
+// Enable CORS for your React app
 app.use(cors({
   origin: 'http://13.48.26.177:3001'
 }));
@@ -12,7 +13,7 @@ app.use(cors({
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-// Handle API routes
+// API endpoint to get the current time
 app.get('/api/message', (req, res) => {
   console.log("GET request received!");
   const currentTime = new Intl.DateTimeFormat('en-US', {
@@ -31,6 +32,7 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
+
 
 
 
