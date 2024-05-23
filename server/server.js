@@ -1,10 +1,12 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+
 const app = express();
 const port = 3000;
 
-app.use(cors()); // Enable CORS for all origins
+// Enable CORS for all origins
+app.use(cors());
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
@@ -28,6 +30,7 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });
+
 
 
 
