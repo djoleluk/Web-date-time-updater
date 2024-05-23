@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const fetchMessage = () => {
-      axios.get('http://13.48.26.177:3000/api/message')
+      axios.get('https://13.48.26.177:3001/api/message')
         .then(response => {
           setMessage(response.data.message);
         })
