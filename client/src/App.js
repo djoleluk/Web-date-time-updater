@@ -3,8 +3,8 @@ import axios from 'axios';
 import './App.css';
 
 function App() {
-  const [message, setMessage] = useState('Prikazi datum i vreme Mionica, Srbija.');
-  const [buttonMessage, setButtonMessage] = useState('Pritisni me!');
+  const [message, setMessage] = useState('Vreme i datum: ...');
+  const [note] = useState('Prikazi datum i vreme Mionica, Srbija.');
 
   useEffect(() => {
     const fetchMessage = () => {
@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>{message}</p>
-        <button onClick={() => setButtonMessage('Button clicked!')}>{buttonMessage}</button>
+        <p>{note}</p>
       </header>
     </div>
   );
