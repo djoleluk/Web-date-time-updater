@@ -21,7 +21,7 @@ app.get('/api/message', (req, res) => {
     dateStyle: 'full',
     timeStyle: 'long'
   }).format(new Date());
-  res.json({ message: `Current time is: ${currentTime}` });
+  res.json({ message: `Datum i vreme: ${currentTime}` });
 });
 
 // Handles any requests that don't match the ones above
