@@ -8,9 +8,8 @@ const app = express();
 const port = 3001;
 
 // Enable CORS for all origins during development
-const cors = require('cors');
 app.use(cors({
-  origin: 'https://c8d4-13-48-26-177.ngrok-free.app'
+    origin: 'https://c8d4-13-48-26-177.ngrok-free.app'
 }));
 
 
