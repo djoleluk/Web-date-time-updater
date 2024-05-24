@@ -8,7 +8,11 @@ const app = express();
 const port = 3001;
 
 // Enable CORS for all origins during development
-app.use(cors());
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://c8d4-13-48-26-177.ngrok-free.app'
+}));
+
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '..', 'client/build')));

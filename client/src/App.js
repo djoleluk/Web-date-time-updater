@@ -8,14 +8,14 @@ function App() {
 
     useEffect(() => {
         const fetchMessage = () => {
-            axios.get(`${window.location.origin}/api/message`)
-                .then(response => {
-                    setMessage(response.data.message);
-                })
-                .catch(error => {
-                    console.error('There was an error fetching the data!', error);
-                    setMessage('Error fetching data from server.');
-                });
+          axios.get('https://c8d4-13-48-26-177.ngrok-free.app/api/message')
+          .then(response => {
+            setMessage(response.data.message);
+          })
+          .catch(error => {
+            console.error('There was an error fetching the data!', error);
+            setMessage('Error fetching data from server.');
+          });        
         };
 
         fetchMessage(); // Fetch the data initially
