@@ -9,7 +9,7 @@ const port = 3001;
 
 // Enable CORS for your React app.
 app.use(cors({
-    origin: 'https://13.48.26.177:3001' 
+    origin: 'https://13.48.26.177:3001' // i changed this back to default 
 }));
 
 // Serve the static files from the React app.
