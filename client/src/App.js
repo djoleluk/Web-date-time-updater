@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const fetchMessage = () => {
-      axios.get('https://2a6c-13-48-26-177.ngrok-free.app/api/message') // this to..
+      axios.get('https://13.48.26.177:3001/api/message') // this to..
         .then(response => {
           setMessage(response.data.message);
         })
