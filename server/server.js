@@ -5,7 +5,9 @@ const port = 3001;
 
 // Enable CORS for your React app
 app.use(cors({
-    origin: ['https://web-date-time-updater.pages.dev', 'http://localhost:3000', 'https://13.48.26.177:3001'] 
+    origin: 'https://web-date-time-updater.pages.dev',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
 }));
 
 // Serve the static files from the React app
