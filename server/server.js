@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const port = 3001;
+const path = require('path');
 
 // Enable CORS for your React app
 app.use(cors({
