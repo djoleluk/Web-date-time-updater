@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const [message, setMessage] = useState('Vreme i datum: ...');
-  const [note] = useState('Prikazi datum i vreme Mionica, Srbija.');
+  const [note] = useState('Prikazi datum i vreme u Mionici, Srbija.');
 
   useEffect(() => {
     const fetchMessage = () => {
