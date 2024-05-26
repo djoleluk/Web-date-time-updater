@@ -10,17 +10,19 @@ function App() {
     const fetchMessage = () => {
       axios.get('https://allowing-secondly-jaguar.ngrok-free.app/api/message')
         .then(response => {
+          console.log('Data fetched successfully:', response.data);
           setMessage(response.data.message);
         })
         .catch(error => {
-          console.error('There was an error fetching the data!', error);
-          setMessage('Error fetching data from server: ' + error);
+          console.error('Error fetching data from server:', error);
+          setMessage('Error fetching data from server.');
         });
     };
-
-    fetchMessage();
-    const interval = setInterval(fetchMessage, 1000);
-    return () => clearInterval(interval);
+  
+    fetchMessage(); // Fetch the data initially
+    const interval = setInterval(fetchMessage, 1000); // Fetch data every second
+  
+    return () => clearInterval(interval); // Clear the interval when the component unmounts
   }, []);
 
   return (
