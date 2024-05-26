@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const [message, setMessage] = useState('Vreme i datum: ...');
-  const [note] = useState('Prikazi datum i vreme Mionica, Srbija.');
+  const [note] = useState('Prikazi datum i vreme u Mionici, Srbija.');
 
   useEffect(() => {
     const fetchMessage = () => {
@@ -17,10 +17,10 @@ function App() {
           setMessage('Error fetching data from server: ' + error);
         });
     };
-  
-    fetchMessage(); // Fetch the data initially
-    const interval = setInterval(fetchMessage, 1000); // Fetch data every second
-    return () => clearInterval(interval); // Clear the interval when the component unmounts
+
+    fetchMessage();
+    const interval = setInterval(fetchMessage, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
