@@ -3,9 +3,9 @@ module.exports = {
     {
       name: 'ngrok-service',
       script: 'ngrok',
-      args: 'http 3001',
+      args: 'http --domain=allowing-secondly-jaguar.ngrok-free.app 3001',
       env: {
-        NGROK_AUTHTOKEN: '1dARQsaFZoUv7VOAuMk5BZqdel9_6Ro9GVuFaxXd9Z6dkr719' // Replace with your actual ngrok authtoken
+        NGROK_AUTHTOKEN: 'your_ngrok_auth_token_here' // Replace with your actual ngrok auth token
       }
     },
     {
@@ -22,5 +22,6 @@ module.exports = {
     }
   ]
 };
+
 
 
