@@ -19,10 +19,10 @@ function App() {
         });
     };
   
-    fetchMessage(); // Fetch the data initially
-    const interval = setInterval(fetchMessage, 1000); // Fetch data every second
+    fetchMessage(); 
+    const interval = setInterval(fetchMessage, 1000); 
   
-    return () => clearInterval(interval); // Clear the interval when the component unmounts
+    return () => clearInterval(interval); 
   }, []);
 
   return (
